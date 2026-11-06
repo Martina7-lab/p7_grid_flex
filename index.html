@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p7_grid_flex</title>
+    <link rel="stylesheet" href="https://use.typekit.net/hnl6zlp.css">
+    <style>
+        :root {
+            --lime-color: #CCFF02;
+            --storm-color: #8696A8;
+            --violet-color: #E4D2FC;
+            --chilli-color: #EF432B;
+            --dark-color: #282625;
+            --light: #EFEAE8;
+            --forest-color: #325444; 
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            container-type: inline-size;
+            width: min(90vw, 180vh);
+            border: 1px solid var(--light);
+            display: grid;
+            grid-template-columns: 40% 40% 20%;
+            grid-template-rows: repeat(4,1fr);
+            gap: 2px;
+            padding: 2px;
+        }
+        .container > div {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        h1 {
+            font-family: "Afronaut";
+            font-weight: normal;
+            line-height: 0.95;
+            font-size: 65px;
+        }
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            padding: 7px;
+
+        }
+        .lime {
+            grid-column: 1;
+            grid-row 1;
+            background-color: var(--lime-color);
+            color: var(--forest-color);
+        }
+        .lime h1 {
+            font-size: 70px;
+        }
+        .storm {
+            grid-column: 1;
+            grid-row: 2;
+            background-color: var(--storm-color);
+            color: var(--light);
+            font-size: 30px;
+        }
+        .violet {
+            grid-column: 1;
+            grid-row: 3;
+            background-color: var(--violet-color);
+            color: var(--chilli-color);
+        }
+        .chilli {
+            grid-column: 1;
+            grid-row: 4;
+            background-color: var(--chilli-color);
+            color: var(--light);
+        }
+        .dark {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+            height: 75%;
+            background-color: var(--dark-color);
+            color: white;
+        }
+        .light{
+            grid-column: 2;
+            grid-row: 2 / span 3; 
+            background-color: var(--light);
+            color: var(--dark-color);
+            display: flex;
+            justify-content: space-between;
+        }
+        .forest {
+            grid-column: 3;
+            grid-row: 1 / span 4;
+            background-color: var(--forest-color);
+            color: var(--light);
+        }
+        .forest h1 {
+            position: relative;
+            right: 10px;
+            font-size: 78px;
+            line-height: 1;
+            padding: 0;
+            writing-mode: vertical-rl;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lime">
+            <p>#CCFF02</p>
+            <h1>LIME</h1>
+        </div>
+        <div class="storm">
+             <p>#8696A8</p>
+             <h1>STORM</h1>
+        </div>
+        <div class="violet">
+            <p>#E4D2FC</p>
+            <h1>VIOLET</h1>
+        </div>
+        <div class="chilli">
+             <p>#EF432B</p>
+             <h1>CHILLI</h1>
+        </div>
+        <div class="dark">
+            <p>#282625</p>
+             <h1>DARK</h1>
+         </div>
+        <div class="light">
+            <p>#EFEAE8</p>
+            <h1>LIGHT & BRIGHT</h1>
+        </div>
+        <div class="forest">
+             <p>#325444</p>
+             <h1>FOREST</h1>
+        </div>
+    </div>
+</body>
+</html>
